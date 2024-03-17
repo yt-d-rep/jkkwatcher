@@ -1,0 +1,12 @@
+FROM python:3.12.2-slim-bullseye
+
+ENV GITHUB_USER_NAME=GITHUB-user-name
+ENV GITHUB_TOKEN=GITHUB-token
+ENV GITHUB_EMAIL=GITHUB-email
+ENV TZ=UTC
+
+COPY entrypoint.sh /entrypoint.sh
+
+RUN apt-get update && apt-get install -y git
+
+ENTRYPOINT [ "/entrypoint.sh" ]

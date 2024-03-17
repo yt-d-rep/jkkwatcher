@@ -1,0 +1,6 @@
+.env.local
+.env
+dev/.env
+dev/.env.local
+work/
+tmp/
