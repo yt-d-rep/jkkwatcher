@@ -3,6 +3,8 @@ FROM python:3.12.2-slim-bullseye
 ENV GITHUB_USER_NAME=GITHUB-user-name
 ENV GITHUB_TOKEN=GITHUB-token
 ENV GITHUB_EMAIL=GITHUB-email
+ENV JKK_USERID=user
+ENV JKK_PASSWORD=password
 ENV TZ=UTC
 
 COPY entrypoint.sh /entrypoint.sh

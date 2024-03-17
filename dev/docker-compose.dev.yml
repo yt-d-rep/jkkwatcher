@@ -9,6 +9,8 @@ services:
       GITHUB_USER_NAME: ${GITHUB_USER_NAME}
       GITHUB_TOKEN: ${GITHUB_TOKEN}
       GITHUB_EMAIL: ${GITHUB_EMAIL}
+      JKK_USERID: ${JKK_USERID}
+      JKK_PASSWORD: ${JKK_PASSWORD}
     volumes:
       - jkkwatcher.dev:/app
     tty: true
