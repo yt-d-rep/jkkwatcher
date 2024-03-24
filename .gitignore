@@ -4,3 +4,6 @@ dev/.env
 dev/.env.local
 work/
 tmp/
+node_modules/
+dist/
+*.png
