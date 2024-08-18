@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@slack/web-api": "^7.0.2",
+    "@types/node-cron": "^3.0.11",
+    "node-cron": "^3.0.3",
     "puppeteer": "^19.3.0"
   },
   "scripts": {
