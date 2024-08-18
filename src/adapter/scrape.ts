@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import { getFloorPlansFromEnv, getWardsFromEnv } from './env';
-import { SearchResult } from './types/search';
+import { SearchResult } from '../types/search';
 
 /**
  * 空き家検索を実行し、検索結果が存在した場合はスクリーンショットを取得する
@@ -67,11 +67,13 @@ export const search = async (): Promise<SearchResult | null> => {
   // 右記ののようなタグの存在を確認する: <strong>2件が該当しました。</strong>
   const existsResult = await newPage?.$('strong');
   if (!existsResult) {
+    console.log('No search result');
     await browser.close();
     return null;
   }
+  console.log('Search result exists');
 
-  const ssPath = 'example.png';
+  const ssPath = 'search_result.png';
   await newPage?.screenshot({ path: ssPath });
 
   await browser.close();
